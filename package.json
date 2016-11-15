@@ -10,6 +10,8 @@
     "bootstrap-sass": "^3.3.5",
     "browserify": "^11.0.1",
     "browserify-shim": "^3.8.10",
+    "fancybox": "^3.0.0",
+    "flexslider": "^2.6.3",
     "grunt": "^0.4.5",
     "grunt-browserify": "^4.0.0",
     "grunt-contrib-compass": "^1.0.3",
@@ -23,7 +25,9 @@
   "browser": {
     "jquery": "./node_modules/jquery/dist/jquery.min.js",
     "bootstrap": "./node_modules/bootstrap-sass/assets/javascripts/bootstrap.min.js",
-    "utilFun": "./public/js/dev/self/utilFun.js"
+    "utilFun": "./public/js/dev/self/utilFun.js",
+    "flexslider": "./node_modules/flexslider/jquery.flexslider-min.js",
+    "fancybox": "./node_modules/fancybox/dist/js/jquery.fancybox.pack.js"
   },
   "browserify-shim": "./public/js/dev/self/shims.js"
 }

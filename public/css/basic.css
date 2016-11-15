@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /*!
- * Bootstrap v3.3.6 (http://getbootstrap.com)
- * Copyright 2011-2015 Twitter, Inc.
+ * Bootstrap v3.3.7 (http://getbootstrap.com)
+ * Copyright 2011-2016 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
@@ -1746,7 +1746,6 @@ a:hover, a:focus {
 }
 /* line 58, ../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_scaffolding.scss */
 a:focus {
-  outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
@@ -3800,7 +3799,6 @@ select[size] {
 input[type="file"]:focus,
 input[type="radio"]:focus,
 input[type="checkbox"]:focus {
-  outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
@@ -4438,7 +4436,6 @@ select[multiple].input-lg,
 }
 /* line 26, ../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_buttons.scss */
 .btn:focus, .btn.focus, .btn:active:focus, .btn:active.focus, .btn.active:focus, .btn.active.focus {
-  outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
@@ -6062,13 +6059,13 @@ tbody.collapse.in {
 }
 /* line 418, ../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
-  color: #0771bb;
-  background-color: #dcdcdc;
+  color: #000;
+  background-color: transparent;
 }
 /* line 425, ../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
-  color: #0771bb;
-  background-color: #dcdcdc;
+  color: #000;
+  background-color: transparent;
 }
 /* line 433, ../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-default .navbar-nav > .disabled > a, .navbar-default .navbar-nav > .disabled > a:hover, .navbar-default .navbar-nav > .disabled > a:focus {
@@ -6094,8 +6091,8 @@ tbody.collapse.in {
 }
 /* line 462, ../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
-  background-color: #dcdcdc;
-  color: #0771bb;
+  background-color: transparent;
+  color: #000;
 }
 @media (max-width: 767px) {
   /* line 473, ../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_navbar.scss */
@@ -6104,13 +6101,13 @@ tbody.collapse.in {
   }
   /* line 475, ../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_navbar.scss */
   .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
-    color: #0771bb;
-    background-color: #dcdcdc;
+    color: #000;
+    background-color: transparent;
   }
   /* line 482, ../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_navbar.scss */
   .navbar-default .navbar-nav .open .dropdown-menu > .active > a, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .active > a:focus {
-    color: #0771bb;
-    background-color: #dcdcdc;
+    color: #000;
+    background-color: transparent;
   }
   /* line 490, ../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_navbar.scss */
   .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a, .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a:hover, .navbar-default .navbar-nav .open .dropdown-menu > .disabled > a:focus {
@@ -6124,7 +6121,7 @@ tbody.collapse.in {
 }
 /* line 508, ../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-default .navbar-link:hover {
-  color: #0771bb;
+  color: #000;
 }
 /* line 513, ../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-default .btn-link {
@@ -6132,7 +6129,7 @@ tbody.collapse.in {
 }
 /* line 515, ../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-default .btn-link:hover, .navbar-default .btn-link:focus {
-  color: #0771bb;
+  color: #000;
 }
 /* line 521, ../../node_modules/bootstrap-sass/assets/stylesheets/bootstrap/_navbar.scss */
 .navbar-default .btn-link[disabled]:hover, .navbar-default .btn-link[disabled]:focus, fieldset[disabled] .navbar-default .btn-link:hover, fieldset[disabled] .navbar-default .btn-link:focus {
@@ -8793,9 +8790,9 @@ button.close {
 }
 /* line 14, ../../scss/basic.scss */
 .navbar.navbar-default {
-  box-shadow: 1px 1px 10px #aaa;
   border-radius: 0;
-  min-height: 90px;
+  min-height: 60px;
+  background: url("../assets/images/nav-background.png") repeat-x;
 }
 /* line 18, ../../scss/basic.scss */
 .navbar.navbar-default .container {
@@ -8804,81 +8801,166 @@ button.close {
 /* line 20, ../../scss/basic.scss */
 .navbar.navbar-default .container a {
   text-transform: uppercase;
-  line-height: 50px;
-  padding: 20px 25px;
-  letter-spacing: 1px;
-  font-weight: bold;
-  font-size: 17px;
 }
-/* line 27, ../../scss/basic.scss */
-.navbar.navbar-default .container a:hover {
-  text-decoration: underline;
-}
-/* line 30, ../../scss/basic.scss */
+/* line 22, ../../scss/basic.scss */
 .navbar.navbar-default .container a.navbar-brand {
   line-height: normal;
   height: auto;
   padding: 0;
 }
-/* line 38, ../../scss/basic.scss */
+/* line 30, ../../scss/basic.scss */
+.navbar.navbar-default .container ul.navbar-nav > li > a {
+  line-height: 20px;
+  padding: 20px 25px;
+  letter-spacing: 1px;
+  font-weight: bold;
+  font-size: 14px;
+}
+/* line 36, ../../scss/basic.scss */
+.navbar.navbar-default .container ul.navbar-nav > li > a:visited {
+  background: transparent;
+}
+/* line 39, ../../scss/basic.scss */
+.navbar.navbar-default .container ul.navbar-nav > li > a:hover {
+  text-decoration: underline;
+  background: url("../assets/images/nav-background-reverse.png") repeat-x;
+}
+/* line 44, ../../scss/basic.scss */
+.navbar.navbar-default .container ul.navbar-nav > li.active {
+  background: transparent;
+}
+/* line 46, ../../scss/basic.scss */
+.navbar.navbar-default .container ul.navbar-nav > li.active > a {
+  text-decoration: none;
+  background: url("../assets/images/nav-background-reverse.png") repeat-x;
+}
+/* line 52, ../../scss/basic.scss */
+.navbar.navbar-default .container ul.navbar-nav > li ul.dropdown-menu {
+  right: auto;
+  left: 0;
+}
+/* line 55, ../../scss/basic.scss */
+.navbar.navbar-default .container ul.navbar-nav > li ul.dropdown-menu a {
+  font-size: 13px;
+  line-height: 20px;
+}
+/* line 58, ../../scss/basic.scss */
+.navbar.navbar-default .container ul.navbar-nav > li ul.dropdown-menu a:hover {
+  text-decoration: underline;
+  background: url("../assets/images/nav-background-reverse.png") repeat-x;
+}
+/* line 68, ../../scss/basic.scss */
 .navbar.navbar-default .navbar-toggle {
   border-color: #aaa;
   vertical-align: middle;
   margin-top: 30px;
 }
 
-/* line 45, ../../scss/basic.scss */
+/* line 75, ../../scss/basic.scss */
 .container, .container-fluid {
   text-align: center;
   padding-bottom: 50px;
 }
-/* line 48, ../../scss/basic.scss */
+/* line 78, ../../scss/basic.scss */
 .container .title, .container-fluid .title {
   text-transform: uppercase;
   margin-top: 40px;
 }
 
-/* line 55, ../../scss/basic.scss */
+/* line 85, ../../scss/basic.scss */
 div.top-right {
   position: absolute;
   right: 0;
   top: 0;
 }
-/* line 60, ../../scss/basic.scss */
+/* line 90, ../../scss/basic.scss */
 div.top-right.language a {
   border-radius: 0;
 }
-/* line 62, ../../scss/basic.scss */
+/* line 92, ../../scss/basic.scss */
 div.top-right.language a:hover {
-  background-color: #dcdcdc;
+  background-color: transparent;
 }
 
-/* line 70, ../../scss/basic.scss */
-#about-us .first-container {
-  margin-top: 90px;
+/* line 98, ../../scss/basic.scss */
+p.comment, span.comment {
+  width: 800px;
+  color: #666;
+  font-size: 14px;
+  font-style: italic;
+  line-height: 19px;
+  margin: 0 auto 0px;
+  text-align: left;
 }
-/* line 73, ../../scss/basic.scss */
-#about-us .second-container {
-  background-image: url("../assets/images/second-container-bg.jpg");
+
+/* line 108, ../../scss/basic.scss */
+#index .first-container {
+  margin-top: 60px;
+  padding: 0 0 0 0;
+}
+/* line 111, ../../scss/basic.scss */
+#index .first-container .flexslider {
+  border: 0;
+  margin-bottom: 0px;
+}
+/* line 116, ../../scss/basic.scss */
+#index .first-container .flexslider ul.slides li {
+  position: relative;
+}
+/* line 118, ../../scss/basic.scss */
+#index .first-container .flexslider ul.slides li .flex-caption {
+  width: 100%;
+  padding: 10px 2%;
+  left: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3);
+  font-size: 14px;
+  line-height: 18px;
+  text-align: left;
+}
+/* line 133, ../../scss/basic.scss */
+#index .first-container .flexslider .flex-control-nav {
+  bottom: 10px;
+  width: auto;
+  right: 10px;
+}
+/* line 138, ../../scss/basic.scss */
+#index .first-container .flexslider .flex-control-nav li a {
+  border-radius: 0;
+  background: rgba(255, 255, 255, 0.5);
+}
+/* line 141, ../../scss/basic.scss */
+#index .first-container .flexslider .flex-control-nav li a.flex-active {
+  background: rgba(255, 255, 255, 0.9);
+}
+/* line 150, ../../scss/basic.scss */
+#index .second-container h3.title {
+  font-weight: bold;
+}
+/* line 154, ../../scss/basic.scss */
+#index .third-container {
+  background-image: url("../assets/images/index/third-container-bg.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: 100% auto;
   padding-bottom: 0px;
 }
-/* line 79, ../../scss/basic.scss */
-#about-us .second-container div.container {
+/* line 160, ../../scss/basic.scss */
+#index .third-container div.container {
   padding-top: 30px;
 }
-/* line 82, ../../scss/basic.scss */
-#about-us .second-container div.container .col > div {
+/* line 163, ../../scss/basic.scss */
+#index .third-container div.container .col > div {
   margin: 20px 20px;
   background: #fff;
   height: 500px;
   padding: 30px;
 }
 @media (min-width: 992px) {
-  /* line 89, ../../scss/basic.scss */
-  #about-us .second-container div.container .col:nth-child(4) {
+  /* line 170, ../../scss/basic.scss */
+  #index .third-container div.container .col:nth-child(4) {
     margin-left: 16.5%;
   }
 }

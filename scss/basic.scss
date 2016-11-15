@@ -2,35 +2,65 @@ $icon-font-path: "../assets/fonts/bootstrap/" !default;
 $brand-primary: #0771bb !default;
 $navbar-default-color: #000 !default;
 $navbar-default-link-color: #000 !default;
-$navbar-default-link-active-color: #0771bb !default;
-$navbar-default-link-hover-color: #0771bb !default;
-$navbar-default-link-active-bg: #dcdcdc !default;
-$navbar-default-link-hover-bg: #dcdcdc !default;
+$navbar-default-link-active-color: #000 !default;
+$navbar-default-link-hover-color: #000 !default;
+$navbar-default-link-active-bg: transparent !default;
+$navbar-default-link-hover-bg: transparent !default;
 
 // Navbar brand label
 $navbar-default-brand-color: #0771bb !default;
 @import "../node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
 
 .navbar.navbar-default {
-  box-shadow: 1px 1px 10px #aaa;
   border-radius: 0;
-  min-height: 90px;
+  min-height: 60px;
+  background: url("../assets/images/nav-background.png") repeat-x;
   .container {
     padding-bottom: 0px;
     a {
       text-transform: uppercase;
-      line-height: 50px;
-      padding: 20px 25px;
-      letter-spacing: 1px;
-      font-weight: bold;
-      font-size: 17px;
-      &:hover {
-        text-decoration: underline;
-      }
       &.navbar-brand {
         line-height: normal;
         height: auto;
         padding: 0;
+      }
+    }
+    ul.navbar-nav {
+      > li {
+         > a {
+          line-height: 20px;
+          padding: 20px 25px;
+          letter-spacing: 1px;
+          font-weight: bold;
+          font-size: 14px;
+           &:visited{
+             background: transparent;
+           }
+          &:hover {
+            text-decoration: underline;
+            background: url("../assets/images/nav-background-reverse.png") repeat-x;
+          }
+        }
+        &.active{
+          background: transparent;
+          > a{
+            text-decoration: none;
+            background: url("../assets/images/nav-background-reverse.png") repeat-x;
+          }
+        }
+
+        ul.dropdown-menu{
+          right: auto;
+          left: 0;
+          a{
+            font-size: 13px;
+            line-height: 20px;
+            &:hover {
+              text-decoration: underline;
+              background: url("../assets/images/nav-background-reverse.png") repeat-x;
+            }
+          }
+        }
       }
     }
 
@@ -65,28 +95,79 @@ div.top-right {
     }
   }
 }
-
-#about-us {
+p.comment, span.comment {
+  width: 800px;
+  color: #666;
+  font-size: 14px;
+  font-style: italic;
+  line-height: 19px;
+  margin: 0 auto 0px;
+  text-align: left;
+}
+#index {
   .first-container {
-    margin-top: 90px;
+    margin-top: 60px;
+    padding: 0 0 0 0 ;
+    .flexslider{
+      border: 0;
+      margin-bottom: 0px;
+      ul.slides
+      {
+        li{
+          position: relative;
+          .flex-caption {
+            width: 100%;
+            padding: 10px 2% ;
+            left: 0;
+            bottom: 0;
+            background: rgba(0,0,0,.8);
+            color: #fff;
+            text-shadow: 0 -1px 0 rgba(0,0,0,.3);
+            font-size: 14px;
+            line-height: 18px;
+            text-align: left;
+          }
+        }
+      }
+
+      .flex-control-nav{
+        bottom: 10px;
+        width: auto;
+        right: 10px;
+        li{
+          a{
+            border-radius: 0;
+            background: rgba(255, 255, 255, 0.5);
+            &.flex-active{
+              background: rgba(255, 255, 255, 0.9);
+            }
+          }
+        }
+      }
+    }
   }
   .second-container {
-    background-image: url("../assets/images/second-container-bg.jpg");
+    h3.title{
+      font-weight: bold;
+    }
+  }
+  .third-container {
+    background-image: url("../assets/images/index/third-container-bg.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: 100% auto;
     padding-bottom: 0px;
-    div.container{
+    div.container {
       padding-top: 30px;
-      .col{
-        >div{
+      .col {
+        > div {
           margin: 20px 20px;
           background: #fff;
           height: 500px;
           padding: 30px;
         }
         @media (min-width: $screen-md-min) {
-          &:nth-child(4){
+          &:nth-child(4) {
             margin-left: 16.5%;
           }
         }

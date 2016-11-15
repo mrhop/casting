@@ -34,13 +34,24 @@ module.exports = function (grunt) {
                 },{
                     expand: true,
                     flatten: true,
-                    src: ['node_modules/bootstrap-sass/assets/javascripts/bootstrap.min.js'],
+                    src: ['node_modules/holderjs/holder.min.js'],
                     dest: 'public/js/dev/'
                 },{
                     expand: true,
                     flatten: true,
-                    src: ['node_modules/holderjs/holder.min.js'],
-                    dest: 'public/js/dev/'
+                    src: ['node_modules/flexslider/flexslider.css'],
+                    dest: 'public/css/flexslider/'
+                },{
+                    expand: true,
+                    flatten: true,
+                    src: ['node_modules/flexslider/fonts/*'],
+                    dest: 'public/css/flexslider/fonts/'
+                },{
+                    expand: true,
+                    flatten: true,
+                    isfile:true,
+                    src: ['node_modules/fancybox/dist/css/jquery.fancybox.css','node_modules/fancybox/dist/img/*.gif','node_modules/fancybox/dist/img/*.png'],
+                    dest: 'public/css/fancybox/'
                 }]
             },main: {
                 files:[

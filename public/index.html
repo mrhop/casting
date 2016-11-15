@@ -5,50 +5,83 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>TEF</title>
     <link href="css/basic.css" rel="stylesheet" type="text/css"/>
+    <link href="css/flexslider/flexslider.css" rel="stylesheet" type="text/css"/>
     <script type="text/javascript" src="js/basic.browserify.js"></script>
     <script type="text/javascript" src="js/dev/holder.min.js"></script>
 </head>
-<body id="about-us">
-<nav class="navbar navbar-default navbar-fixed-top">
-    <div class="container">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#">
-                <img src="holder.js/300x90?bg=0771bb">
-            </a>
-        </div>
+<body id="index">
+<!--<nav class="navbar navbar-default navbar-fixed-top">-->
+    <!--<div class="container">-->
+        <!--&lt;!&ndash; Brand and toggle get grouped for better mobile display &ndash;&gt;-->
+        <!--<div class="navbar-header">-->
+            <!--<button type="button" class="navbar-toggle collapsed" data-toggle="collapse"-->
+                    <!--data-target="#bs-example-navbar-collapse-1" aria-expanded="false">-->
+                <!--<span class="sr-only">Toggle navigation</span>-->
+                <!--<span class="icon-bar"></span>-->
+                <!--<span class="icon-bar"></span>-->
+                <!--<span class="icon-bar"></span>-->
+            <!--</button>-->
+            <!--<a class="navbar-brand" href="#">-->
+                <!--<img src="assets/images/logo.png">-->
+            <!--</a>-->
+        <!--</div>-->
 
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
-                <li class="active"><a href="#">About Us</a></li>
-                <li><a href="#">Career</a></li>
-                <li><a href="#">Partners</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </div><!-- /.navbar-collapse -->
-    </div><!-- /.container-fluid -->
-    <div class="top-right language">
-        <div class="btn-group btn-group-xs" role="group">
-            <a class="btn btn-default">EN</a>
-            <a class="btn btn-default">中文</a>
-        </div>
+        <!--&lt;!&ndash; Collect the nav links, forms, and other content for toggling &ndash;&gt;-->
+        <!--<div class="collapse navbar-collapse navbar-right bottom-right" id="bs-example-navbar-collapse-1">-->
+            <!--<ul class="nav navbar-nav">-->
+                <!--<li class="dropdown">-->
+                    <!--<a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">关于我们<span class="caret"></span></a>-->
+                    <!--<ul class="dropdown-menu">-->
+                        <!--<li><a href="#">公司简介</a></li>-->
+                        <!--<li><a href="#">荣誉资质</a></li>-->
+                        <!--<li><a href="#">设备展示</a></li>-->
+                    <!--</ul>-->
+                <!--</li>-->
+                <!--<li><a href="#">铸造工艺</a></li>-->
+                <!--<li><a href="#">经典案例</a></li>-->
+                <!--<li><a href="#">产品展示</a></li>-->
+                <!--<li><a href="#">材料规范</a></li>-->
+                <!--<li><a href="#">联系我们</a></li>-->
+            <!--</ul>-->
+        <!--</div>&lt;!&ndash; /.navbar-collapse &ndash;&gt;-->
+    <!--</div>&lt;!&ndash; /.container-fluid &ndash;&gt;-->
+    <!--<div class="top-right language">-->
+        <!--<div class="btn-group btn-group-xs" role="group">-->
+            <!--<a class="btn btn-default">EN</a>-->
+            <!--<a class="btn btn-default">中文</a>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</nav>-->
+<div class="container-fluid first-container">
+    <div class="flexslider">
+        <ul class="slides">
+            <li>
+                <img src="assets/images/index/slider1.jpg" />
+                <p class="flex-caption">铸件介绍1</p>
+            </li>
+            <li>
+                <img src="assets/images/index/slider2.jpg" />
+                <p class="flex-caption">铸件介绍2</p>
+            </li>
+            <li>
+                <img src="assets/images/index/slider3.jpg" />
+                <p class="flex-caption">铸件介绍3</p>
+            </li>
+            <li>
+                <img src="assets/images/index/slider4.jpg" />
+                <p class="flex-caption">铸件介绍4</p>
+            </li>
+        </ul>
     </div>
-</nav>
-<div class="container first-container">
-    <p class="h1 title">Title about us</p>
-    <p class="h3">Comment-->We invest in companies with high value-add technologies that significantly increase
-        industrial productivity and efficiency, enable new applications and manufacturing methods and drive innovation
-        for industrial products and solutions.</p>
 </div>
-<div class="container-fluid second-container">
+<div class="container second-container">
+    <h3 class="title">我们将用精湛的技艺，丰富的经验和严谨的态度为您提供优质的产品和服务</h3>
+    <p class="content">
+        我们拥有精湛技术的专家团队和丰富经验工人，可以为您提供各种相关（需要添加铸件信息）产品和服务，欢迎联系我们。<br/>
+        咨询电话：XXX 和 XXX，欢迎致电垂询，以获取更多的企业和产品信息。
+    </p>
+</div>
+<div class="container-fluid third-container">
     <div class="container">
         <div class="col-md-4 col">
             <div>
