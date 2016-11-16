@@ -27,6 +27,7 @@
     "bootstrap": "./node_modules/bootstrap-sass/assets/javascripts/bootstrap.min.js",
     "utilFun": "./public/js/dev/self/utilFun.js",
     "flexslider": "./node_modules/flexslider/jquery.flexslider-min.js",
+    "mixitup": "./bower_components/mixitup/build/jquery.mixitup.min.js",
     "fancybox": "./node_modules/fancybox/dist/js/jquery.fancybox.pack.js"
   },
   "browserify-shim": "./public/js/dev/self/shims.js"

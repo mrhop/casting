@@ -1,0 +1,20 @@
+{
+  "name": "casting",
+  "description": "铸造网站",
+  "main": "index.js",
+  "authors": [
+    "mrhop <233402923@qq.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/mrhop/casting",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "mixitup": "^2.1.11"
+  }
+}

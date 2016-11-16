@@ -26,35 +26,51 @@ $navbar-default-brand-color: #0771bb !default;
       }
     }
     ul.navbar-nav {
+      margin-top: 0px;
+      margin-bottom: 0px;
       > li {
-         > a {
+        > a {
           line-height: 20px;
           padding: 20px 25px;
+          @media (max-width: $screen-sm-max) {
+            padding: 20px 10px;
+          }
+
+          @media (max-width: $screen-xs-max) {
+            background: #fff;
+            border-bottom: 1px solid #c2ccd1;
+          }
           letter-spacing: 1px;
           font-weight: bold;
           font-size: 14px;
-           &:visited{
-             background: transparent;
-           }
+          &:visited {
+            background: transparent;
+          }
           &:hover {
             text-decoration: underline;
             background: url("../assets/images/nav-background-reverse.png") repeat-x;
           }
         }
-        &.active{
+        &.active {
           background: transparent;
-          > a{
+          > a {
             text-decoration: none;
             background: url("../assets/images/nav-background-reverse.png") repeat-x;
           }
         }
 
-        ul.dropdown-menu{
+        ul.dropdown-menu {
+          padding-top: 0;
+          padding-bottom: 0;
           right: auto;
           left: 0;
-          a{
+          a {
             font-size: 13px;
             line-height: 20px;
+            @media (max-width: $screen-xs-max) {
+              background: #ccc;
+              border-bottom: 1px solid #c2ccd1;
+            }
             &:hover {
               text-decoration: underline;
               background: url("../assets/images/nav-background-reverse.png") repeat-x;
@@ -66,9 +82,10 @@ $navbar-default-brand-color: #0771bb !default;
 
   }
   .navbar-toggle {
-    border-color: #aaa;
+    border-color: #666;
     vertical-align: middle;
-    margin-top: 30px;
+    margin-top: 25px;
+    margin-bottom: 0;
   }
 }
 
@@ -95,6 +112,7 @@ div.top-right {
     }
   }
 }
+
 p.comment, span.comment {
   width: 800px;
   color: #666;
@@ -104,25 +122,25 @@ p.comment, span.comment {
   margin: 0 auto 0px;
   text-align: left;
 }
+
 #index {
   .first-container {
     margin-top: 60px;
-    padding: 0 0 0 0 ;
-    .flexslider{
+    padding: 0 0 0 0;
+    .flexslider {
       border: 0;
       margin-bottom: 0px;
-      ul.slides
-      {
-        li{
+      ul.slides {
+        li {
           position: relative;
           .flex-caption {
             width: 100%;
-            padding: 10px 2% ;
+            padding: 10px 2%;
             left: 0;
             bottom: 0;
-            background: rgba(0,0,0,.8);
+            background: rgba(0, 0, 0, .8);
             color: #fff;
-            text-shadow: 0 -1px 0 rgba(0,0,0,.3);
+            text-shadow: 0 -1px 0 rgba(0, 0, 0, .3);
             font-size: 14px;
             line-height: 18px;
             text-align: left;
@@ -130,15 +148,15 @@ p.comment, span.comment {
         }
       }
 
-      .flex-control-nav{
+      .flex-control-nav {
         bottom: 10px;
         width: auto;
         right: 10px;
-        li{
-          a{
+        li {
+          a {
             border-radius: 0;
             background: rgba(255, 255, 255, 0.5);
-            &.flex-active{
+            &.flex-active {
               background: rgba(255, 255, 255, 0.9);
             }
           }
@@ -147,7 +165,7 @@ p.comment, span.comment {
     }
   }
   .second-container {
-    h3.title{
+    h3.title {
       font-weight: bold;
     }
   }
@@ -163,8 +181,16 @@ p.comment, span.comment {
         > div {
           margin: 20px 20px;
           background: #fff;
-          height: 500px;
+          height: 400px;
           padding: 30px;
+          img {
+            border-radius: 75px;
+            width: 75px;
+            display: inline-block;
+          }
+          h4 {
+            font-weight: bold;
+          }
         }
         @media (min-width: $screen-md-min) {
           &:nth-child(4) {
@@ -175,3 +201,218 @@ p.comment, span.comment {
     }
   }
 }
+
+#company {
+  .first-container {
+    border: 1px solid #c2ccd1;
+    margin-top: 60px;
+    background-color: #d4d4d4;
+    img {
+      width: 400px;
+      &.left {
+        float: left;
+        margin-right: 20px;
+      }
+      &.right {
+        float: right;
+        margin-left: 20px;
+      }
+      @media (max-width: $screen-xs-max) {
+        width: 300px;
+      }
+    }
+    h3.title {
+      margin-top: 20px;
+      font-weight: bold;
+    }
+    p {
+      text-align: left;
+      text-indent: 10px;
+      margin-bottom: 4px;
+    }
+  }
+}
+
+#qualification, #equipment, #craft {
+  .first-container {
+    border: 1px solid #c2ccd1;
+    margin-top: 60px;
+    background-color: #d4d4d4;
+    .title {
+      margin-top: 20px;
+      font-weight: bold;
+    }
+  }
+}
+
+#qualification {
+  .first-container {
+    .col {
+      height: 250px;
+      background-color: transparent;
+      padding: 10px;
+      overflow: hidden;
+      img {
+        width: auto;
+        max-width: 100%;
+      }
+    }
+  }
+}
+
+#equipment {
+  .portfolio-main .filters {
+    margin: 0 1% 2%;
+    padding: 0;
+    list-style: none;
+    text-align: center;
+  }
+
+  .portfolio-main .filters li {
+    display: inline-block;
+    margin-right: 20px;
+  }
+
+  .portfolio-main .filters li span {
+    font-size: 12px;
+    display: block;
+    padding: 5px 15px;
+    border: 1px solid rgb(221, 221, 221);
+    text-decoration: none;
+    color: #000;
+    cursor: pointer;
+    text-transform: uppercase;
+    @include transition(0.5s all);
+    @media (max-width: $screen-sm-max) {
+      padding: 3px 10px;
+    }
+    @media (max-width: $screen-xs-max) {
+      padding: 2px 8px;
+    }
+    @media (max-width: $screen-phone) {
+      padding: 1px 2px;
+    }
+  }
+
+  .portfolio-main .filters li span.active, .portfolio-main .filters li span:hover {
+    color: #bd4932;
+  }
+
+  .portfolio-main .portfoliolist {
+    overflow: hidden;
+    text-align: center;
+  }
+
+  .portfolio-main .portfoliolist .portfolio {
+    @include box-sizing(border-box);
+    width: 23%;
+    margin: 1%;
+    float: left;
+    display: none;
+    overflow: hidden;
+    @media (max-width: $screen-sm-max) {
+      width: 31%;
+    }
+    @media (max-width: $screen-xs-max) {
+      width: 48%;
+    }
+    @media (max-width: $screen-phone) {
+      width: 98%;
+    }
+  }
+
+  .portfolio-wrapper {
+    overflow: hidden;
+    position: relative !important;
+    cursor: pointer;
+  }
+
+  .portfolio img {
+    top: 0px !important;
+    position: relative;
+    max-width: 100%;
+    width: 100%;
+    opacity: 5;
+    @include transition(all 300ms);
+  }
+
+  .portfolio .label {
+    left: 0;
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    height: 20px;
+    bottom: -20px;
+    @include transition(0.3s all);
+  }
+
+  .portfolio .label-text {
+    color: #fff;
+    position: relative;
+    z-index: 500;
+  }
+
+  .portfolio .text-category {
+    display: block;
+    font-size: 13px;
+    text-align: center;
+
+    @media (max-width: $screen-phone) {
+      font-size: 12px;
+    }
+    text-transform: uppercase;
+    color: #ffffff;
+    font-weight: 100;
+    margin-top: 3px;
+  }
+
+  .portfolio .label-bg {
+    background: #bd4932;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
+#craft {
+  .first-container {
+    background: #fff;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    .craft-wrapper {
+      border: 1px solid #666;
+      margin-bottom: 10px;
+      .sub-title {
+        text-align: left;
+        background: #ccc;
+        padding: 10px 10px;
+        margin-bottom: 0;
+        margin-top: 0;
+        font-weight: bold;
+      }
+      .row{
+        margin: 0 ;
+        .col-md-5 {
+          padding: 0;
+          img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+          }
+        }
+        .col-md-7 {
+          &:hover{
+            background-color: #d4d4d4;
+          }
+          height: 100%;
+          text-align: left;
+          padding: 10px 15px;
+        }
+      }
+
+    }
+  }
+}
+

@@ -4,7 +4,8 @@
 var $ = jQuery = require('jquery');
 require("bootstrap");
 require("flexslider");
-require("fancybox");
+require("mixitup");
+require("fancybox"); 
 
 var utilFun = require("utilFun");
 $(document).ready(function () {
@@ -15,6 +16,23 @@ $(document).ready(function () {
             animation: "slide",
             controlNav: true,
             directionNav: false,
+        });
+    }
+    if($(document.body).attr("id") == "equipment"){
+        $('.portfoliolist').mixItUp();
+        $('.portfolio-wrapper').hover(function () {
+            $(this).find(".label").css("bottom", 0);
+        }, function () {
+            $(this).find(".label").css("bottom", "-20px");
+        })
+        $('.portfoliolist').on('mixEnd', function (e, state) {
+            $('div.portfolio:visible a.fancyShow').fancybox({
+                helpers: {
+                    title: {
+                        type: 'over'
+                    }
+                }
+            });
         });
     }
 });
