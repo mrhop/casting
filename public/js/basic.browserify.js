@@ -101,7 +101,7 @@ $(document).ready(function () {
             directionNav: false,
         });
     }
-    if($(document.body).attr("id") == "equipment"){
+    if($(document.body).attr("id") == "equipment" || $(document.body).attr("id") == "product"){
         $('.portfoliolist').mixItUp();
         $('.portfolio-wrapper').hover(function () {
             $(this).find(".label").css("bottom", 0);
@@ -118,7 +118,12 @@ $(document).ready(function () {
             });
         });
     }
-});
+
+    if($(document.body).attr("id") == "case"){
+
+    }
+
+    });
 
 
 },{"bootstrap":2,"fancybox":3,"flexslider":4,"jquery":5,"mixitup":1,"utilFun":7}],7:[function(require,module,exports){

@@ -233,7 +233,7 @@ p.comment, span.comment {
   }
 }
 
-#qualification, #equipment, #craft {
+#qualification, #equipment, #craft, #case, #product, #material, #contact {
   .first-container {
     border: 1px solid #c2ccd1;
     margin-top: 60px;
@@ -260,7 +260,7 @@ p.comment, span.comment {
   }
 }
 
-#equipment {
+#equipment, #product {
   .portfolio-main .filters {
     margin: 0 1% 2%;
     padding: 0;
@@ -376,7 +376,7 @@ p.comment, span.comment {
   }
 }
 
-#craft {
+#craft, #material {
   .first-container {
     background: #fff;
     border-radius: 15px;
@@ -392,8 +392,8 @@ p.comment, span.comment {
         margin-top: 0;
         font-weight: bold;
       }
-      .row{
-        margin: 0 ;
+      .row {
+        margin: 0;
         .col-md-5 {
           padding: 0;
           img {
@@ -403,7 +403,7 @@ p.comment, span.comment {
           }
         }
         .col-md-7 {
-          &:hover{
+          &:hover {
             background-color: #d4d4d4;
           }
           height: 100%;
@@ -416,3 +416,101 @@ p.comment, span.comment {
   }
 }
 
+#case {
+  .first-container {
+    ul.nav-stacked {
+      @media (max-width: $screen-sm-max) {
+        > li {
+          float: left;
+        }
+      }
+    }
+    .tab-content {
+      background-color: #e8e8e8;
+      overflow: hidden;
+      .tab-pane {
+        padding: 10px;
+        img {
+          width: 400px;
+          &.left {
+            float: left;
+            margin-right: 20px;
+          }
+          &.right {
+            float: right;
+            margin-left: 20px;
+          }
+          @media (max-width: $screen-sm-max) {
+            width: 300px;
+          }
+        }
+        p {
+          text-align: left;
+          text-indent: 10px;
+          margin-bottom: 4px;
+        }
+      }
+    }
+  }
+}
+
+#contact {
+  .first-container {
+    > .row {
+      margin-top: 100px;
+      @media (max-width: $screen-sm-max) {
+        margin-top: 30px;
+      }
+      font-size: 16px;
+      line-height: 30px;
+      font-weight: bold;
+      .left-div {
+        float: left;
+        width: 60%;
+        @media (max-width: $screen-sm-max) {
+          width: 100%;
+        }
+        .title, .content {
+          padding: 0px 12px;
+          display: inline-block;
+        }
+        .title {
+          @media (max-width: $screen-sm-max) {
+            width: 50%;
+          }
+          width: 25%;
+          text-align: right;
+        }
+        .content {
+          @media (max-width: $screen-sm-max) {
+            width: 50%;
+          }
+          width: 75%;
+          text-align: left;
+        }
+      }
+      .right-div {
+        float: left;
+        width: 40%;
+        .right-first {
+          float: left;
+          @media (max-width: $screen-sm-max) {
+            width: 50%;
+          }
+        }
+        .right-second{
+          @media (max-width: $screen-sm-max) {
+            float: left;
+            width: 50%;
+          }
+        }
+        @media (max-width: $screen-sm-max) {
+          width: 100%
+        }
+        img {
+          width: 120px;
+        }
+      }
+    }
+  }
+}
